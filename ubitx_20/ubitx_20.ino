@@ -49,7 +49,7 @@
  *  Si5351 object to control the clocks.
  */
 #include <Wire.h>
-#include <EEPROM.h>
+#include "EEPROM.h"
 #include "ubitx.h"
 #include "ubitx_eemap.h"
 
