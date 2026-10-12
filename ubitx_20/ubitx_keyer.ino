@@ -61,7 +61,7 @@ byte getPaddle(){
  */
 void cwKeydown(){
   keyDown = 1;                  //tracks the CW_KEY
-  tone(CW_TONE, (int)sideTone); 
+  sidetoneOn(sideTone);
   digitalWrite(CW_KEY, 1);     
 
   //Modified by KD8CEC, for CW Delay Time save to eeprom
@@ -75,7 +75,7 @@ void cwKeydown(){
  */
 void cwKeyUp(){
   keyDown = 0;    //tracks the CW_KEY
-  noTone(CW_TONE);
+  sidetoneOff();
   digitalWrite(CW_KEY, 0);    
   
   //Modified by KD8CEC, for CW Delay Time save to eeprom

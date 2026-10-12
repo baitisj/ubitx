@@ -679,7 +679,7 @@ int getValueByKnob(int valueType, int targetValue, int minKnobValue, int maxKnob
 
         if (valueType == 1) //Generate Side Tone
         {
-          tone(CW_TONE, targetValue);          
+          sidetoneOn(targetValue);       
         }
         else if (valueType == 2 || valueType == 5 ) // 2:IFS, 5:ATT
         {
@@ -779,7 +779,7 @@ void menuSetupCwTone(int btn){
 
     sideTone = getValueByKnob(1, sideTone, 100, 2000, 10, "Tone", 2); //1 : Generate Tone, targetValue, minKnobValue, maxKnobValue, stepSize
 
-    noTone(CW_TONE);
+    sidetoneOff();
     
     printLineF2(F("Sidetone set!"));
     EEPROM.put(CW_SIDETONE, sideTone);
