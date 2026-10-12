@@ -70,7 +70,7 @@ extern byte I2C_LCD_SECOND_ADDRESS;     //only using Dual LCD Mode
 #define FN_VFOTOMEM     1 //254
 #define FN_MEMTOVFO     1 //188
 #define FN_MEMORYKEYER  1 //156
-#define FN_WSPR         1 //1044
+#define FN_WSPR         0 //1044
 #define FN_SDRMODE      1 //68
 #define FN_CALIBRATION  1 //666
 #define FN_CARRIER      1 //382
