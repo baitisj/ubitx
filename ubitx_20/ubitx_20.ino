@@ -1096,16 +1096,11 @@ void initSettings(){
     //if empty band Information, auto insert default region 2 frequency range
     //This part is made temporary for people who have difficulty setting up, so can remove it when you run out of memory.
     useHamBandCount = 10;
-    hamBandRange[0][0] = 1810; hamBandRange[0][1] = 2000; 
-    hamBandRange[1][0] = 3500; hamBandRange[1][1] = 3800; 
-    hamBandRange[2][0] = 5351; hamBandRange[2][1] = 5367; 
-    hamBandRange[3][0] = 7000; hamBandRange[3][1] = 7300;     //region 2
-    hamBandRange[4][0] = 10100; hamBandRange[4][1] = 10150; 
-    hamBandRange[5][0] = 14000; hamBandRange[5][1] = 14350; 
-    hamBandRange[6][0] = 18068; hamBandRange[6][1] = 18168; 
-    hamBandRange[7][0] = 21000; hamBandRange[7][1] = 21450; 
-    hamBandRange[8][0] = 24890; hamBandRange[8][1] = 24990; 
-    hamBandRange[9][0] = 28000; hamBandRange[9][1] = 29700; 
+    static const unsigned int defaultBands[10][2] PROGMEM = {
+      {1810, 2000}, {3500, 3800}, {5351, 5367}, {7000, 7300},     //region 2
+      {10100, 10150}, {14000, 14350}, {18068, 18168}, {21000, 21450},
+      {24890, 24990}, {28000, 29700}};
+    memcpy_P(hamBandRange, defaultBands, sizeof defaultBands);
   }
   
 
